@@ -1,12 +1,15 @@
 {
   "name": "contact_keeper",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "server.js",
   "author": "Giorgi Agladze",
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "clientinstall": "yarn --cwd client install",
+    "client": "yarn --cwd client start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\""
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
